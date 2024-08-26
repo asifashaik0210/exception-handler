@@ -50,4 +50,8 @@ public class StudentController {
         List<Student> allStudents = studentService.getAllStudents(pageNo, pageSize,sortBy,sortDir);
         return new ResponseEntity<>(allStudents, HttpStatus.OK);
     }
+    @GetMapping("/home")
+    public void homePage(){
+        System.out.println("welcome page");
+    }
 }
